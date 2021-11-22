@@ -16,13 +16,13 @@ jobs:
     if: github.event.pull_request.merged == true
 
     steps:
-      - name: Wait on check
-        uses: lewagon/wait-on-check-action@v1.1.1
-        with:
-          ref: ${{ github.sha }}
-          check-name: 'Integration test for Cenit'
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          wait-interval: 10
+      # - name: Wait on check
+      #   uses: lewagon/wait-on-check-action@v1.1.1
+      #   with:
+      #     ref: ${{ github.sha }}
+      #     check-name: 'Integration test for Cenit'
+      #     repo-token: ${{ secrets.GITHUB_TOKEN }}
+      #     wait-interval: 10
 
       - name: Checkout repository
         uses: actions/checkout@v2
